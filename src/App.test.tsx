@@ -1,9 +1,9 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import {render} from "@testing-library/react";
+import App from "./App";
+import {fireEvent , screen} from "@testing-library/react";
 
-test('renders learn react link', () => {
+test("Renders Table  - First Row Task", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const linkElement = screen.getByText("Manger!");
+  expect(linkElement).toMatchSnapshot();
 });
