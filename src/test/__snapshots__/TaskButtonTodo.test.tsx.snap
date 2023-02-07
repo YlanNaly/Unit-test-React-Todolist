@@ -8,6 +8,7 @@ exports[`render input in snapshot 1`] = `
   style="padding: 5px; margin-left: 20px; font-size: 20px;"
 >
   <input
+    data-testid="x"
     type="checkbox"
   />
 </span>

@@ -1,6 +1,7 @@
 import React from "react";
 import {fireEvent, render} from "@testing-library/react";
 import TasksButtonDone from "../todolist/ButtonDone";
+import TasksButtonToDo from "../todolist/TaskButtonTodo";
 
 
 it("render input done in snapshot" , ()=>{
@@ -12,34 +13,19 @@ it("render input done in snapshot" , ()=>{
     expect(input).toMatchSnapshot();
 })
 
-it("render onchange method ok" , ()=>{
+it("render onchange method" , ()=>{
     const value = {id:1 , text:"mada"};
     const tree = render(<TasksButtonDone task={value}/>);
     const input= tree.getByTestId("listing") as  HTMLInputElement;
     (fireEvent.change(input, {target: {value : value}}));
     expect(input.textContent).toEqual(value.text.concat("×"));
 })
-//TODO
-/*
-it("render onchange method ko" , ()=>{
-    const value = {id:1 , text:"mada"};
-    const tree = render(<TasksButtonDone task={value}/>);
-    const input= tree.getByTestId("listing") as  HTMLInputElement;
-    const checkbox = tree.getByTestId("checkbox") as HTMLInputElement;
-    !checkbox.checked;
-    (fireEvent.change(input, {target: {value : value}}));
-    expect(input.textContent).toEqual("");
-})
-*/
-//TODO
-/*
-it("render onClick method " , ()=>{
-    const value = {id:1 , text:"mada"};
-    const tree = render(<TasksButtonDone task={value} deleteTask={value.id}/>);
-    const input= tree.getByTestId("listing") as  HTMLInputElement;
-    // @ts-ignore
-    fireEvent.change(input.getElementsByClassName("forme").item(0) , "");
+it("render onClick 'x' to delete task" , ()=>{
+    const task = [{ id: 1, text: "Manger!", done: true }]
+    const tree = render(<TasksButtonToDo addTasks={null} deleteTask3={null} task={task} toggleTask={null} deleteTask={()=>jest.fn()}/>) ;
 
-    expect(input.textContent).toEqual("");
+    const x = tree.getByTestId("x");
+    const list = tree.getByTestId("list") as HTMLSpanElement;
+    fireEvent.click(x);
+    expect(list.textContent).toBe("")
 })
-*/
