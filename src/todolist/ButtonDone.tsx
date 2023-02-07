@@ -1,5 +1,7 @@
 import React from "react";
-const TasksButtonDone = (props : {task : any, toggleTask:any, deleteTask: any}) => {
+const TasksButtonDone = (props :any) => {
+
+    const { task, toggleTask, deleteTask } = props;
 
     return (
         <div>
@@ -8,12 +10,13 @@ const TasksButtonDone = (props : {task : any, toggleTask:any, deleteTask: any}) 
                     type="checkbox"
                     data-testid="checkbox"
                     checked={true}
-                    onChange={() => props.toggleTask(props.task.id)}
+                    onChange={() => toggleTask(task.id)}
                 />
-                {props.task.text}
+                {task.text}
+
                 <span
                     className="forme"
-                    onClick={() => props.deleteTask(props.task.id)}
+                    onClick={() => deleteTask(task.id)}
                     role="button"
                     style={{ padding: "5px", marginLeft: "20px" , fontSize:"20px" }}
                 >
