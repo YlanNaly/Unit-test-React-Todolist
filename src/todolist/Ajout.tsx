@@ -16,7 +16,9 @@ export default function AddTask(props: { addTask: (arg0: string) => void;}){
                     className="input-group-text"
                     placeholder="Ajouter une tâche"
                     value={text}
-                    onClick={handleSubmit}
+                    onKeyDown={(e)=> {
+                        e.key === "Enter" && handleSubmit(e)
+                    }}
                     onChange={(e) => setText(e.target.value)}
                     data-testid="toggle"
                 />

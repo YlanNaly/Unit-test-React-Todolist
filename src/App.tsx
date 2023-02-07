@@ -2,6 +2,7 @@ import {useState} from "react";
 import AddTask from "./todolist/Ajout";
 import Todo from "./todolist/Todo";
 import DONE from "./todolist/Done";
+import "./App.css";
 
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
     }
 
     return (
-        <>
+        <div className="container">
         <AddTask addTask={addTask} />
         <div className="App">
             <div className="todo" style={{width: "18rem"}}>
@@ -53,13 +54,16 @@ function App() {
                     <Todo tasks={tasks} toggleTask={toggleTask} deleteTask={addToDone}/>
                 </ul>
             </div>
+
             <div className="done" style={{width: "18rem"}}>
                 <div className="Done-header">DONE</div>
                 <ul className="list-group list-group-flush">
                     <DONE tasks={done} toggleTask={toggleTask} deleteTask={deleteTask3}/>
                 </ul>
             </div>
-        </div></>
+        </div>
+
+        </div>
 
 
     );

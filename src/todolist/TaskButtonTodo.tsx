@@ -16,7 +16,7 @@ const TasksButtonToDo :FC<Tbutton> = ( { task, deleteTask }) => {
         style={{ padding: "5px", marginLeft: "20px" , fontSize:"20px" }}>
         <input
             type="checkbox"
-            checked={true}
+            checked={false}
         />
             </span>
             </li>
