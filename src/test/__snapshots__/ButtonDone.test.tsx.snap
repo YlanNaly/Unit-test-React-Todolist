@@ -7,6 +7,7 @@ exports[`render input done in snapshot 1`] = `
 >
   <input
     checked=""
+    data-testid="checkbox"
     type="checkbox"
   />
   <span
@@ -17,18 +18,4 @@ exports[`render input done in snapshot 1`] = `
     ×
   </span>
 </li>
-`;
-
-exports[`render input in snapshot 1`] = `
-<span
-  class="forme"
-  data-testid="deleteTask"
-  role="button"
-  style="padding: 5px; margin-left: 20px; font-size: 20px;"
->
-  <input
-    checked=""
-    type="checkbox"
-  />
-</span>
 `;

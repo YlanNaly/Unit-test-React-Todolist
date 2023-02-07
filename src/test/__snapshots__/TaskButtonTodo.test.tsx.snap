@@ -13,17 +13,3 @@ exports[`render input in snapshot 1`] = `
   />
 </span>
 `;
-
-exports[`render text in my list 1`] = `
-<span
-  class="forme"
-  data-testid="deleteTask"
-  role="button"
-  style="padding: 5px; margin-left: 20px; font-size: 20px;"
->
-  <input
-    checked=""
-    type="checkbox"
-  />
-</span>
-`;
