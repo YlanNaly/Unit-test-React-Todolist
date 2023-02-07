@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render input done in snapshot 1`] = `
+<li
+  class="list-group-item"
+  data-testid="listing"
+>
+  <input
+    checked=""
+    type="checkbox"
+  />
+  <span
+    class="forme"
+    role="button"
+    style="padding: 5px; margin-left: 20px; font-size: 20px;"
+  >
+    ×
+  </span>
+</li>
+`;
+
+exports[`render input in snapshot 1`] = `
+<span
+  class="forme"
+  data-testid="deleteTask"
+  role="button"
+  style="padding: 5px; margin-left: 20px; font-size: 20px;"
+>
+  <input
+    checked=""
+    type="checkbox"
+  />
+</span>
+`;

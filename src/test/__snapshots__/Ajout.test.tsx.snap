@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`render input add task 1`] = `
+<input
+  class="input-group-text"
+  data-testid="toggle"
+  placeholder="Ajouter une tâche"
+  type="text"
+  value=""
+/>
+`;
+
 exports[`test add task for input 1`] = `
 <input
   class="input-group-text"

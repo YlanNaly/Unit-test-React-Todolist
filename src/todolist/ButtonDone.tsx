@@ -1,21 +1,19 @@
 import React from "react";
-const TasksButtonDone = (props :any) => {
-
-    const { task, toggleTask, deleteTask } = props;
+const TasksButtonDone = (props : {task : any, toggleTask:any, deleteTask: any}) => {
 
     return (
         <div>
-            <li className="list-group-item">
+            <li className="list-group-item" data-testid="listing">
                 <input
                     type="checkbox"
+                    data-testid="checkbox"
                     checked={true}
-                    onChange={() => toggleTask(task.id)}
+                    onChange={() => props.toggleTask(props.task.id)}
                 />
-                {task.text}
-
+                {props.task.text}
                 <span
                     className="forme"
-                    onClick={() => deleteTask(task.id)}
+                    onClick={() => props.deleteTask(props.task.id)}
                     role="button"
                     style={{ padding: "5px", marginLeft: "20px" , fontSize:"20px" }}
                 >
